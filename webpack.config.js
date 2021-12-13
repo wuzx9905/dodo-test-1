@@ -1,5 +1,4 @@
 const path  = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
 module.exports = {
     entry: {
         index: './lib/index.tsx'
@@ -16,7 +15,14 @@ module.exports = {
         rules:[
             {
                 test: /\.tsx?$/,
-                loader: 'awesome-typescript-loader'
+                use:[
+                    {
+                    loader: 'ts-loader',
+                    options:{
+                        transpileOnly: true
+                    }
+                }
+                ]
             }
         ]
     },
