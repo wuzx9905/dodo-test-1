@@ -1,4 +1,4 @@
-const path  = require('path')
+const path = require('path')
 module.exports = {
     entry: {
         index: './lib/index.tsx'
@@ -12,21 +12,29 @@ module.exports = {
         libraryTarget: 'umd',
     },
     module: {
-        rules:[
+        rules: [
             {
                 test: /\.tsx?$/,
-                use:[
+                use: [
                     {
-                    loader: 'ts-loader',
-                    options:{
-                        transpileOnly: true
+                        loader: 'ts-loader',
+                        options: {
+                            transpileOnly: true
+                        }
                     }
-                }
                 ]
             },
             {
                 test: /\.svg$/,
                 loader: 'svg-sprite-loader',
+            },
+            {
+                test: /\.s([ac])ss$/,
+                use: [
+                    'style-loader',
+                    'css-loader',
+                    'sass-loader'
+                ]
             }
         ]
     },

@@ -27,7 +27,7 @@
     "noUnusedLocals": true
   },
   "include": [
-    "lib/xx/x",
+    "./lib",
   ],
   "exclude": [
     "node_modules",

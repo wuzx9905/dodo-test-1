@@ -1,5 +1,6 @@
 import React from 'react';
-import './importIcons'
+import './importIcons';
+import './icon.scss'
 
 
 interface IconProps{
@@ -8,11 +9,9 @@ interface IconProps{
 
 const Icon:React.FunctionComponent<IconProps> = (props)=>{
     return(
-        <span>
-            <svg>
+            <svg className="doui-icon">
                 <use xlinkHref={`#${props.name}`}/>
             </svg>
-        </span>
     )
 }
 
