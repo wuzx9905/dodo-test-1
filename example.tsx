@@ -1,46 +1,56 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import {HashRouter as Router, Route, Link} from 'react-router-dom';
-import IconExample from './lib/icon/icon.example';
+import {HashRouter as Router, Route, Switch, NavLink} from 'react-router-dom';
 import DialogExample from './lib/dialog/dialog.example';
 import ButtonExample from './lib/button.example';
 import LayoutExample from './lib/layout/layout.example';
+import {Layout, Header, Aside, Content, Footer} from './lib/layout/layout';
+import './example.scss';
+import IconDemo from './lib/icon/icon.demo';
+
+const logo = require('./doui-logo.png').default;
 
 
 ReactDOM.render(
     <Router>
-        <div>
-            <header>
+        <Layout className="site-page">
+            <Header className="site-header">
                 <div className="logo">
-                    DOUI
+                    <img src={logo} width="44" height="44" alt=""/>
+                    <span>DO-UI</span>
                 </div>
 
-            </header>
-            <div>
-                <aside>
+            </Header>
+            <Layout>
+                <Aside className="site-aside">
                     <h2>组件</h2>
                     <ul>
                         <li>
-                            <Link to="/icon">Icon</Link>
+                            <NavLink to="/icon">Icon</NavLink>
                         </li>
                         <li>
-                            <Link to="/button">Button</Link>
+                            <NavLink to="/button">Button</NavLink>
                         </li>
                         <li>
-                            <Link to="/dialog">对话框</Link>
+                            <NavLink to="/dialog">对话框</NavLink>
                         </li>
                         <li>
-                            <Link to="/layout">布局</Link>
+                            <NavLink to="/layout">布局</NavLink>
                         </li>
                     </ul>
-                </aside>
-                <main>
-                    <Route path="/icon" component={IconExample}/>
-                    <Route path="/button" component={ButtonExample}/>
-                    <Route path="/dialog" component={DialogExample}/>
-                    <Route path="/layout" component={LayoutExample}/>
-                </main>
-            </div>
-        </div>
+                </Aside>
+                <Content className="site-main">
+                    <Switch>
+                        <Route path="/icon" component={IconDemo}/>
+                        <Route path="/button" component={ButtonExample}/>
+                        <Route path="/dialog" component={DialogExample}/>
+                        <Route path="/layout" component={LayoutExample}/>
+                    </Switch>
+                </Content>
+            </Layout>
+            <Footer className="site-footer">
+                &copy; 吴梓贤
+            </Footer>
+        </Layout>
     </Router>
     , document.querySelector('#root'));
