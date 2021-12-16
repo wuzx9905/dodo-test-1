@@ -22,6 +22,10 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
+pre{
+  font-family: "Fira Code Media",consolas,monospace;
+}
+
 $padding: 16px;
 $main-color: #60a0d1;
 $border-color: #EEEEEE;
@@ -96,4 +100,8 @@ body{
   padding: $padding 0;
   border-top: 10px;
   border-top:1px solid $border-color;
+}
+
+.example{
+  padding: $padding 0;
 }
