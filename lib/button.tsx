@@ -2,7 +2,7 @@ import React, {ReactElement} from 'react';
 import './button.scss'
 
 interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
-    children: ReactElement | Array<ReactElement>
+    children?: ReactElement | Array<ReactElement> | string
 }
 
 const Button:React.FunctionComponent<ButtonProps> = (props)=> {
@@ -16,3 +16,11 @@ const Button:React.FunctionComponent<ButtonProps> = (props)=> {
 }
 
 export default Button
+
+// function Button() {
+//     return (
+//         <button>button2</button>
+//     );
+// }
+//
+// export default Button;
