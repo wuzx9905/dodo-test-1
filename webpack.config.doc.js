@@ -1,7 +1,7 @@
 const base = require('./webpack.config')
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const path = require("path");
-module.exports = Object.assign({},base,{
+const path = require('path')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+module.exports = Object.assign({}, base, {
     mode: 'production',
     output: {
         path: path.resolve(__dirname, 'doc'),
@@ -12,7 +12,7 @@ module.exports = Object.assign({},base,{
     plugins: [
         new HtmlWebpackPlugin({
             template: 'example.html',
-            filename:'example.html'
+            filename: 'index.html'
         })
-    ]
+    ],
 })

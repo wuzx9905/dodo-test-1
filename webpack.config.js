@@ -45,12 +45,4 @@ module.exports = {
             },
         ]
     },
-    optimization: {
-        minimize: true,
-        minimizer: [
-            new Terserplugin({
-                extractComments: false,
-            })
-        ]
-    }
 }

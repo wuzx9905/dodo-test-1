@@ -77,7 +77,6 @@ const modal = (content: ReactNode, buttons?: Array<ReactElement>, afterClose?: (
 const alert = (content: string) => {
     const button = <button onClick={() => close()}>OK</button>;
     const close = modal(content, [button]);
-    window.alert(close)
 };
 const confirm = (content: string, yes?: () => void, no?: () => void) => {
     const onYes = () => {
