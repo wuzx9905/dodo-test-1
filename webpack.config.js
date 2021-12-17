@@ -1,5 +1,5 @@
-const path = require('path')
-const Terserplugin = require("terser-webpack-plugin")
+const path = require('path');
+const Terserplugin = require("terser-webpack-plugin");
 module.exports = {
     entry: {
         index: './lib/index.tsx'

@@ -40,7 +40,6 @@ export default function () {
                 </Dialog>
             </div>
 
-
             <div style={{position: 'relative', zIndex: 9}}>
                 <h1>example 2</h1>
                 <button onClick={() => setY(!y)}>click</button>
@@ -53,8 +52,6 @@ export default function () {
                     <strong>hi</strong>
                 </Dialog>
             </div>
-
-
         </div>
     );
 }

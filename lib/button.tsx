@@ -1,7 +1,17 @@
-import React from "react";
-function Button() {
+import React, {ReactElement} from 'react';
+import './button.scss'
+
+interface ButtonProps extends React.HTMLAttributes<HTMLElement> {
+    children: ReactElement | Array<ReactElement>
+}
+
+const Button:React.FunctionComponent<ButtonProps> = (props)=> {
     return (
-        <button>按钮</button>
+        <button className={props.className}>
+            <span>
+                {props.children}
+            </span>
+        </button>
     )
 }
 
