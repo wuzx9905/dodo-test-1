@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {scopedClassMaker} from '../helpers/classes';
 
 interface Props extends React.HTMLAttributes<HTMLElement> {

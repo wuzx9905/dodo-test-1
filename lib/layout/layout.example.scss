@@ -1,5 +1,8 @@
-.do-layout-hasAside .hi{
+.do-layout.do-layout-hasAside.hi{
   flex-direction: row;
+}
+.do-layout .hi{
+  flex-direction: column;
 }
 
 .x {

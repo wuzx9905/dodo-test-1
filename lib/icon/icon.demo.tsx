@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import Demo from '../../demo';
 import IconExample from './icon.example';
 
