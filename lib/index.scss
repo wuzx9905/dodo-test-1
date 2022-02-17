@@ -1,3 +1,4 @@
+@import "helper";
 [class^=doui-]{
   box-sizing: border-box;
   &::after,
@@ -7,14 +8,24 @@
 }
 
 button{
-  box-sizing: border-box;
-  height: 30px;
   margin: 0 4px;
+  height: 32px;
+  padding: 6.4px 20px;
+  font-size: 16px;
   border-radius: 4px;
+  text-align: center;
+  background: $main-color;
+  border: hidden;
+  color: white;
   &:first-child{
     margin-left: 0;
   }
   &:last-child{
     margin-right: 0;
+  }
+  &:hover{
+    cursor: pointer;
+    filter: brightness(1.25);
+    transition: .5s ease ;
   }
 }

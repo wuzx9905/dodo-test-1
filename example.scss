@@ -105,4 +105,7 @@ body{
 
 .example{
   padding: $padding 0;
+  .iconExample > svg{
+    margin-right: 10px;
+  }
 }

@@ -7,7 +7,6 @@ import LayoutExample from './lib/layout/layout.example';
 import {Layout, Header, Aside, Content, Footer} from './lib/layout/layout';
 import './example.scss';
 import IconDemo from './lib/icon/icon.demo';
-// import IconExample from './lib/icon/icon.example';
 
 const logo = require('./doui-logo.png').default;
 

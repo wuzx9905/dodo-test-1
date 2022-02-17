@@ -6,29 +6,14 @@ export default function () {
     const [x, setX] = useState(false);
     const [y, setY] = useState(false);
     const openModal = () => {
-        const close = modal(<h1>你好
+        const close = modal(<div className="modalExample"><h1>你好</h1>
             <button onClick={() => close()}>close</button>
-        </h1>);
+        </div>);
     };
     return (
         <div>
-            <div>
-                <h1>example 4</h1>
-                <button onClick={openModal}>modal</button>
-            </div>
-
-            <div>
-                <h1>example 3</h1>
-                <button onClick={() => alert('1')}>alert</button>
-                <button onClick={() => confirm('1', () => {
-                    console.log('你点击了yes');
-                }, () => {
-                    console.log('你点击了no');
-                })}>confirm
-                </button>
-            </div>
-
-            <div style={{position: 'relative', zIndex: 10, border: '1px solid red', color: 'red'}}>
+            <div style={{position: 'relative',borderBottom:'1px solid #f0f0f0',marginBottom:'20px',paddingBottom:'20px',
+                marginRight:'16px'}}>
                 <h1>example 1</h1>
                 <button onClick={() => setX(!x)}>click</button>
                 <Dialog visible={x} buttons={
@@ -41,7 +26,8 @@ export default function () {
                 </Dialog>
             </div>
 
-            <div style={{position: 'relative', zIndex: 9}}>
+            <div style={{position: 'relative',borderBottom:'1px solid #f0f0f0',marginBottom:'20px',paddingBottom:'20px',
+                marginRight:'16px'}}>
                 <h1>example 2</h1>
                 <button onClick={() => setY(!y)}>click</button>
                 <Dialog visible={y} closeOnClickMask={true} buttons={
@@ -52,6 +38,23 @@ export default function () {
                 } onClose={() => {setY(false);}}>
                     <strong>hi</strong>
                 </Dialog>
+            </div>
+
+            <div style={{position: 'relative',borderBottom:'1px solid #f0f0f0',marginBottom:'20px',paddingBottom:'20px',
+            marginRight:'16px'}}>
+                <h1>example 3</h1>
+                <button onClick={() => alert('1')}>alert</button>
+                <button onClick={() => confirm('1', () => {
+                    console.log('你点击了yes');
+                }, () => {
+                    console.log('你点击了no');
+                })}>confirm
+                </button>
+            </div>
+
+            <div style={{position: 'relative'}}>
+                <h1>example 4</h1>
+                <button onClick={openModal}>modal</button>
             </div>
         </div>
     );
