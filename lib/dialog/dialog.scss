@@ -32,7 +32,9 @@
     color: #434343;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    &:last-child{
+      justify-content: space-around;
+    }
     >.modalExample{
       display: flex;
       justify-content: space-between;
